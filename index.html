@@ -27,7 +27,252 @@
 </head>
 
 <body>
-    
+    <!-- Main content -->
+    <div class="container">
+        <header class="header">
+            <div class="header__container section__container">
+                <div class="header__logo-box">
+                    <img src="assets/img/logo.png" alt="SantiagoSG Logo" class="header__logo">
+                </div>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#section-about" class="nav__link">About me</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#section-works" class="nav__link">Work</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#section-contact" class="nav__link">Contact</a>
+                        </li>
+                        <li class="nav__item nav__item-button">
+                            <a href="#" class="nav__link nav__link-button">Resume</a>
+                        </li>
+                        
+                    </ul>
+                </nav>
+                <div class="menuToggle" id="menuToggle">
+                    <div class="menuToggle__line menuToggle__line--1  no-animation"></div>
+                    <div class=" menuToggle__line menuToggle__line--2  no-animation"></div>
+                    <div class="menuToggle__line menuToggle__line--3  no-animation"></div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="section-hero" id="#home">
+                <div class="section-hero__container section__container">
+                    <div class="section-hero__text-container">
+                        <p class="heading-primary__subtitle">
+                            Hi! I’m
+                        </p>
+                        <h1 class="heading-primary">
+                            Santiago
+                            <br />Suárez González
+                        </h1>
+                        <p class="heading-primary__subtitle">
+                            A UI developer
+                            <br />Let’s built a beautifull interface together.
+                        </p>
+                    </div>
+                    <div class="section-hero__image-container">
+                        <!--  600px/16= 37.5em    900px/16= 56.25em  -->
+                        <img srcset="assets/img/background-hexagons.png 300w, assets/img/background-hexagons.png 1000w"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px" alt="fondo heading"
+                            class="section-hero__photo" src="assets/img/background-hexagons.png">
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-about" id="section-about">
+                <div class="section__container section-about__container">
+                    <div class="col-1-of-2">
+                        <div class="skills">
+                            <div class="skills__list">
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--up">HTML</span>
+                                    <img src="assets/img/icon-html-w70.png" alt="Html5" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--up">CSS</span>
+                                    <img src="assets/img/icon-css-w70.png" alt="Css5" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--up">JAVASCRIPT</span>
+                                    <img src="assets/img/icon-javascript-w70.png" alt="JavaScript" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--up">GIT</span>
+                                    <img src="assets/img/icon-git-w71.png" alt="Git - Github" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--down">SASS</span>
+                                    <img src="assets/img/icon-sass-w94.png" alt="Sass" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--down">BOOTSTRAP</span>
+                                    <img src="assets/img/icon-bootstrap-w71.png" alt="BootsTrap" class="skills__img">
+                                </div>
+                                <div class="skills__item">
+                                    <span class="skills__tooltip skills__tooltip--down">WORDPRESS</span>
+                                    <img src="assets/img/icon-wordpress-w71.png" alt="Wordpress" class="skills__img">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2 section-about__text">
+                        <h2 class="heading-secondary">About me</h2>
+                        <p class="paragraph">I am a Front End developer with experience building websites and web
+                            applications. I am always seeking to improve my skills to continually grow professionally to
+                            be able to contribute consistently to the workgroup with which I am. My main focus these
+                            days is building accessible, inclusive products and digital experiences</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section-works" id="section-works">
+                <div class="section__container section-works__container">
+                    <h2 class="heading-secondary u-center-text">Work</h2>
+                    <p class="paragraph u-center-text">Contact me if you have a question or if you want to work
+                        together.</p>
+
+                    <div class="work-cards">
+                        <div class="work-card">
+                            <span class="work-card__filter"></span>
+                            <img src="assets/img/card-01-w570.jpg" alt="" class="work-card__background">
+                            <h3 class="work-card__heading u-center-text">CEO field trip</h3>
+                            <p class="work-card__subheading u-center-text">Website: <br>HTML, CSS, JS</p>
+                            <p class="work-card__description">A vanilla JavaScript
+                                application
+                                which
+                                generates and prints a CV using
+                                user entered data. Features controlled forms, Hooks and is served by a Context API
+                                global
+                                state
+                                management solution. Uses JavaScript to print off a copy of the CV information.</p>
+                            <div class="work-card__buttons">
+                                <a class="work-card__button" href="#" target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--view"
+                                        data-icon="clarity:world-line"></i>
+                                    <span class="work-card__button--description">Website</span>
+                                </a>
+                                <a class="work-card__button" href="#" target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--code"
+                                        data-icon="line-md:github-twotone"></i>
+                                    <span class="work-card__button--description">Repository</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card">
+                            <span class="work-card__filter"></span>
+                            <img src="assets/img/card-trillo-w570.jpg" alt="" class="work-card__background">
+                            <h3 class="work-card__heading u-center-text">Trillo</h3>
+                            <p class="work-card__subheading u-center-text">Landing Page: <br>HTML, CSS, SCSS</p>
+                            <p class="work-card__description">This is a Re-designed website for hotel booking (Front-end
+                                only) based on a project from a course on Advanced CSS Artitechture and SASS. With
+                                enfasis mainly on Flexbox and the use of BEM.</p>
+                            <div class="work-card__buttons">
+                                <a class="work-card__button" href="https://santiagosg.github.io/Trillo-website/"
+                                    target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--view"
+                                        data-icon="clarity:world-line"></i>
+                                    <span class="work-card__button--description">Website</span>
+                                </a>
+                                <a class="work-card__button" href="https://github.com/santiagosg/Trillo-website"
+                                    target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--code"
+                                        data-icon="line-md:github-twotone"></i>
+                                    <span class="work-card__button--description">Repository</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="work-card">
+                            <span class="work-card__filter"></span>
+                            <img src="assets/img/Card-natours-w570.png" alt="" class="work-card__background">
+                            <h3 class="work-card__heading u-center-text">Natours</h3>
+                            <p class="work-card__subheading u-center-text">Landing Page: <br>HTML, CSS, SCSS, JS</p>
+                            <p class="work-card__description">A Re-designed website with enfasis in Flexbox based on a
+                                project from a course on Advanced CSS Artitechture and SASS.</p>
+                            <div class="work-card__buttons">
+                                <a class="work-card__button" href="https://santiagosg.github.io/Natours-website/"
+                                    target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--view"
+                                        data-icon="clarity:world-line"></i>
+                                    <span class="work-card__button--description">Website</span>
+                                </a>
+                                <a class="work-card__button" href="https://github.com/santiagosg/Natours-website"
+                                    target="_blank">
+                                    <i class="iconify work-card__button--icon work-card__button--code"
+                                        data-icon="line-md:github-twotone"></i>
+                                    <span class="work-card__button--description">Repository</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="hexagon-button">
+                        <a class="hexagon-button__link" href="https://github.com/santiagosg" target="_blank">
+                            <img src="assets/img/icon-hex-view-w82.png" alt="" class="hexagon-button__img">
+                            <p class="hexagon-button__text">See More</p>
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="section-contact" id="section-contact">
+                <div class="section__container section-contact__container">
+                    <h2 class="heading-secondary u-center-text">Contact</h2>
+                    <p class="paragraph u-center-text">Contact me if you have a question or if you want to work
+                        together.</p>
+
+                    <div class="hexagon-button">
+                        <a class="hexagon-button__link" href="mailto:santiagosg011@gmail.com" target="_blank">
+                            <img src="assets/img/icon-hex-mail-w82.png" alt="" class="hexagon-button__img">
+                            <p class="hexagon-button__text">Mail Me</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p class="footer__copy u-center-text">Copyrigth &copy; 2021. Built by SantiagoSG</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <button onclick="topFunction()" class="myBtnToTop myBtnToTop--hide" id="myBtnToTop" title="Go to top">
+        <img src="assets/img/icon-totop-w82.png" alt="" class="myBtnToTop__img">
+    </button>
+
+    <div class="menu-social">
+        <div class="menu-social__list">
+            <div class="menu-social__item">
+                <a class="menu-social__link" href="https://github.com/santiagosg" target="_blank">
+                    <span class="menu-social__tooltip menu-social__tooltip--right">Github</span>
+                    <img src="assets/img/icon-hex-github-w84.png" alt="Github" class="menu-social__img">
+                </a>
+            </div>
+            <div class="menu-social__item">
+                <a class="menu-social__link" href="https://www.linkedin.com/in/santiagosg21/" target="_blank">
+                    <span class="menu-social__tooltip menu-social__tooltip--right">Linkedin</span>
+                    <img src="assets/img/icon-hex-linkedin-w84.png" alt="Linkedin" class="menu-social__img">
+                </a>
+            </div>
+            <div class="menu-social__item">
+                <a class="menu-social__link" href="mailto:santiagosg011@gmail.com" target="_blank">
+                    <span class="menu-social__tooltip menu-social__tooltip--right">Mail Me</span>
+                    <img src="assets/img/icon-hex-mail-w82.png" alt="Mail Me" class="menu-social__img">
+                </a>
+            </div>
+        </div>
+    </div>
 
 
     <script src="assets/js/main.js"></script>
