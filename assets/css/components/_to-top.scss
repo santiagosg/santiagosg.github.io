@@ -1,0 +1,31 @@
+.myBtnToTop {
+  display: block;
+  visibility: hidden;
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 9;
+  transition: all 1s ease;
+
+  &__img {
+    max-width: 4.063rem; // 65px;
+    opacity: .85;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+
+    @include respond(tab-port) {
+      height: 3.125rem; // 50px
+    }
+  }
+
+  &:hover > &__img {
+    transform: translateY(-8px);
+    opacity: 1;
+  }
+
+  @include respond(phone) {
+    right: 5px;
+  }
+}

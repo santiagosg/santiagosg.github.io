@@ -1,0 +1,29 @@
+.work-cards {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+
+  margin-top: 5rem;  // 80px
+  margin-bottom: 3.125rem;  // 50px
+  max-width: 71.875rem; // 1150px
+
+  @include respond(tab-land) {
+    max-width: 811px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+
+  @include respond(tab-port) {
+    max-width: 311px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  @include respond(phone) {
+    margin-top: 2rem;  // 32px
+    margin-bottom: 2.125rem;  // 34px
+  }
+
+}

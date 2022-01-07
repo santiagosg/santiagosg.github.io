@@ -1,0 +1,103 @@
+.skills {
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    gap: 30px;
+    animation: moveInBottom .8s ease-out .4s 1 backwards;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;  // 32px
+    }
+
+    @include respond(phone) {
+      gap: .5rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 7.188rem; // 115px
+    padding: 0.813rem 0.813rem; // 13px
+
+    @include respond(phone) {
+      width: 5.188rem;
+    }
+  }
+
+  &__tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 7.188rem;  // 115px
+    border: 1px solid $color-gray-light-1;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity 0.3s, transform .3s ease;
+  }
+
+  &__tooltip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+  &__item:hover > &__tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  &__tooltip--up {
+    bottom: 100%;
+    transform: translateY(-10px);
+    
+  }
+
+  &__item:hover > &__tooltip--up {
+    transform: translateY(0px);
+  }
+
+  &__tooltip--up:after {
+    top: 100%;
+    border-color: #b3b3b3 transparent transparent transparent;
+  }
+
+  &__tooltip--down {
+    top: 100%;
+    transform: translateY(+10px);
+  }
+
+  &__item:hover > &__tooltip--down {
+    transform: translateY(0px);
+  }
+  
+  &__tooltip--down:after {
+    top: unset;
+    bottom: 100%;
+    border-color: transparent transparent #b3b3b3 transparent;
+  }
+
+  &__img {
+    max-height: 4.375rem; // 70px
+
+    @include respond(tab-land) {
+      max-height: 3.75rem; // 60px
+    }
+
+    @include respond(tab-port) {
+      max-height: 3.45rem; // 55px
+    }
+
+    @include respond(phone) {
+      max-height: 3rem;  // 48px
+    }
+  }
+}

@@ -1,0 +1,141 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.paragraph {
+  color: $color-gray-dark-1;
+  text-align: justify;
+
+  @include respond(big-dekstop) {
+    font-size: 1.125rem; // 18px
+    line-height: 1.375rem; // 22px
+  }
+}
+
+.nav__link {
+  font-weight: 600;
+}
+
+.heading-primary {
+  color: $color-primary-1;
+  font-size: 3.438rem; // 55px
+  line-height: 3.813rem; //61px
+
+  &__subtitle {
+    font-size: 1.438rem; //26px
+    line-height: 1.813rem; //29px
+
+    @include respond(big-dekstop) {
+      font-size: 2.438rem; //39px
+      line-height: 2.813rem; //45px
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.125rem;  // 18px
+      line-height: 1.375rem;  // 22px
+    }
+  }
+
+  @include respond(big-dekstop) {
+    font-size: 4.438rem; // 71px
+    line-height: 4.813rem; // 77px
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.75rem;  // 44px
+    line-height: 2.813rem;  // 45px
+  }
+
+  @include respond(phone) {
+    font-size: 2.375rem;  // 38px
+    line-height: 2.625rem;  // 42px
+  }
+}
+
+.heading-secondary {
+  color: $color-primary-2;
+  font-size: 2.25rem; // 36px
+
+  @include respond(big-dekstop) {
+    font-size: 2.813rem; // 45px
+    line-height: 4.375rem; // 70px
+  }
+
+  @include respond(big-port) {
+    text-align: center;
+  }
+}
+
+.skills__tooltip {
+  font-size: 0.688rem; // 11px
+  text-transform: uppercase;
+  color: $color-gray-dark-1;
+  text-align: center;
+}
+
+.work-card {
+  &__description {
+    font-size: 0.938rem; // 15px
+    line-height: 1.25rem; // 20px
+    text-align: justify;
+
+    @include respond(big-dekstop) {
+      font-size: 1.063rem;  // 17px
+      line-height: 1.375rem; // 22px
+    }
+  }
+
+  &__description--white {
+    color: $color-gray-light-2;
+  }
+
+  &__heading {
+    font-family: 800;
+    font-size: 0.875rem; // 14px
+    line-height: 1.125rem; // 18px
+    text-transform: uppercase;
+    color: $color-primary-2;
+
+    @include respond(big-dekstop) {
+      font-size: 1rem;
+      line-height: 1.375rem; // 22px
+    }
+  }
+
+  &__subheading {
+    font-family: 600;
+    font-size: 0.875rem; // 14px
+    line-height: 1rem;
+    color: $color-gray-dark-1;
+
+    @include respond(big-dekstop) {
+      font-size: 1rem;
+      line-height: 1.375rem; // 22px
+    }
+  }
+
+  &__button--description {
+    font-weight: 500;
+    font-size: 0.813rem;  // 13px
+    color: $color-primary-2;
+
+    @include respond(big-dekstop) {
+      font-size: 0.938rem; // 15px
+    }
+  }
+}
+
+.hexagon-button__text {
+  color: $color-gray-dark-1;
+}
+
+.footer__copy {
+  color: $color-primary-2;
+
+  @include respond(big-dekstop) {
+    font-size: 1.125rem;  // 18px
+    line-height: 1.375rem; // 22px
+  }
+}

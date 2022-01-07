@@ -1,0 +1,98 @@
+.menu-social {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  
+
+  &__list {
+    animation: fadeIn .7s ease .7s 1 backwards;
+    
+  }
+
+  &__item {
+    position: relative;
+    opacity: .85;
+    transition: opacity .3s ease-in-out;
+  }
+
+  &__item:hover {
+    opacity: 1;
+  }
+
+  &__item:after {
+    content: "";
+    background: black;
+    position: absolute;
+    bottom: 7px;
+    left: 49%;
+    height: 20%;
+    width: 2.5px;
+    transform-origin: 0 0;
+    transition: transform 0.3s ease;
+  }
+
+  &__item:hover:after {
+    transform: scale(1, 0.6);
+  }
+
+  &__tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 5rem; // 80px
+    padding: 2px 5px;
+    border: 1px solid $color-gray-light-1;
+    border-radius: 6px;
+    opacity: 0;
+    font-size: 0.688rem;
+    color: $color-gray-dark-1;
+    background-color: $color-gray-light-2;
+    text-align: center;
+    transition: opacity 0.3s, transform 0.3s ease;
+  }
+
+  &__tooltip:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+  }
+
+  &__item:hover  &__tooltip {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+
+  &__tooltip--right {
+    bottom: 40%;
+    transform: translateX(10px);
+    left: 100%;
+  }
+
+  &__item:hover  &__tooltip--right {
+    transform: translateX(0px);
+  }
+
+  &__tooltip--right:after {
+    top: 35%;
+    left: -6px;
+    border-color: transparent #b3b3b3 transparent transparent;
+  }
+
+  &__img {
+    max-width: 4.063rem; // 65px;
+
+    @include respond(tab-port) {
+      height: 3.125rem; // 50px
+    }
+  }
+
+  @include respond(phone) {
+    left: 5px;
+  }
+}

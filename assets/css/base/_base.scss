@@ -1,0 +1,58 @@
+// Reset
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+//
+body {
+  background-color: $color-white;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section__container {
+  max-width: 71.875rem; // 1150px
+  width: 100%;
+  margin: 0 auto;
+
+  @include respond(tab-land) {
+    padding-left: 2.5rem;  // 40px;
+    padding-right: 2.5rem;  // 40px;
+  }
+
+  @include respond(tab-port) {
+    padding-left: 1.5rem;  // 24px
+    padding-right: 1.5rem;
+    max-width: 50rem;  // 800px
+  }
+
+  @include respond(phone) {
+    padding-left: 2.5rem;  // 40px;
+    padding-right: 2.5rem;  // 40px;
+    max-width: 36.25rem;  // 580px
+  }
+}
+
+// Edit ScrollBar
+::-webkit-scrollbar {
+  width: .6rem;
+
+  &-thumb {
+    background-color: $color-primary-1;
+    margin: 0.5rem;
+    border-radius: 0.3rem;
+    border: solid 0.2rem $color-primary-1;
+  }
+}

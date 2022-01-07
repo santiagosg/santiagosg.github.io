@@ -1,0 +1,128 @@
+.work-card {
+  position: relative;
+  box-shadow: 2px 2px 10px rgba($color: $color-gray-dark-1, $alpha: 0.5);
+  border-radius: 8px;
+
+  &__filter {
+    background-image: linear-gradient(to top right, #091036, #0581e3);
+    height: 15.125rem; // 252px
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    border-radius: 6px 6px 0 0;
+    z-index: 1;
+    transition: opacity .5s ease;
+
+    @include respond(tab-land) {
+      height: 16.25rem; // 260px  12.938
+    }
+
+    @include respond(tab-port) {
+      height: 12.938rem; // 207px
+    }
+  }
+
+  &:hover > &__filter {
+    opacity: 0.5;
+  }
+
+  &:hover > &__background {
+    filter: blur(1.5px);
+  }
+
+  &__background {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    transition: filter 0.5s ease-in-out;
+  }
+
+  &__description {
+    position: absolute;
+    top: 0;
+    padding: 1.75rem 1.313rem 0 1.313rem; // 28px - 21px
+    opacity: 0;
+    color: $color-gray-light-2;
+    z-index: 2;
+    transition: opacity .7s ease 0.25s;
+
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+      opacity: 1;
+      color: $color-primary-2;
+      position: relative;
+      padding: 0 1.313rem 1.75rem 1.313rem;
+    }
+  }
+
+  &:hover > &__description {
+    opacity: 1;
+  }
+
+  /*
+  &__description--white {
+    color: $color-gray-light-2;
+  }*/
+
+  &__heading {
+    margin-top: 1.5rem; // 24px
+    margin-bottom: 0.688rem; // 11px
+  }
+
+  &__subheading {
+    padding-bottom: 1.875rem; // 30px
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    padding: 1.125rem 2.813rem 1.125rem; // 18px 45px 18px
+    border-top: 1px solid $color-gray-light-1;
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    padding: 0.375rem 0.938rem 0.375rem 0.5rem; // 6px 15px 6px 8px
+    border: 1px solid $color-primary-2;
+    border-radius: 6px;
+    background-color: $color-white;
+    transition: all 0.5s ease;
+  }
+
+  &__button:hover {
+    background-color: $color-primary-1;
+    border-color: $color-primary-1;
+    box-shadow: 2px 2px 10px rgba($color: $color-gray-dark-1, $alpha: 0.5);
+  }
+
+  &__button--icon {
+    color: $color-primary-2;
+    margin-right: 11px;
+    transition: color 0.5s ease;
+  }
+
+  &__button:hover > &__button--icon {
+    color: $color-white;
+  }
+
+  &__button--code path.il-md-fill {
+    fill: $color-primary-2;
+    fill-opacity: 1;
+    transition: fill 0.5s ease;
+  }
+
+  &__button:hover > &__button--code path.il-md-fill {
+    fill: $color-white;
+  }
+
+  &__button--description {
+    transition: color 0.5s ease;
+  }
+
+  &__button:hover > &__button--description {
+    color: $color-white;
+  }
+
+}

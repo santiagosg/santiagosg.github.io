@@ -1,0 +1,31 @@
+.header {
+  background-color: $color-white;
+  border-bottom: 1px solid $color-gray-light-1;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-box {
+    display: flex;
+  }
+
+  &__logo {
+    height: 3.563rem; // 57px
+    align-items: center;
+    margin: 0.313rem 0;
+    animation: fadeIn 0.7s ease 0.2s 1 backwards;
+    z-index: 11;
+
+    @include respond(tab-port) {
+      margin: 0.913rem 0;
+      height: 2.863rem;
+    }
+  }
+
+  &__logo.activeMenuToggle {
+    position: fixed;
+  }
+}
