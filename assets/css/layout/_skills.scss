@@ -87,6 +87,8 @@
 
   &__img {
     max-height: 4.375rem; // 70px
+    transition: transform .5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    cursor: help;
 
     @include respond(tab-land) {
       max-height: 3.75rem; // 60px
@@ -99,5 +101,12 @@
     @include respond(phone) {
       max-height: 3rem;  // 48px
     }
+  }
+
+  &__item:hover &__img {
+    transform: scale(0.8) rotate(
+12deg
+);
+    transform-origin: center;
   }
 }
