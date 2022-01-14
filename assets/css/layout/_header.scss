@@ -17,7 +17,6 @@
     align-items: center;
     margin: 0.313rem 0;
     animation: fadeIn 0.7s ease 0.2s 1 backwards;
-    z-index: 11;
 
     @include respond(tab-port) {
       margin: 0.913rem 0;
@@ -25,7 +24,5 @@
     }
   }
 
-  &__logo.activeMenuToggle {
-    position: fixed;
-  }
+
 }

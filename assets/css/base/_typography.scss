@@ -22,7 +22,7 @@ body {
   color: $color-primary-1;
   font-size: 3.438rem; // 55px
   line-height: 3.813rem; //61px
-  text-shadow: 3px 2px 3px rgba($color-primary-1, .65);
+  text-shadow: 3px 2px 3px rgba($color-primary-1, 0.65);
 
   &__subtitle {
     font-size: 1.438rem; //26px
@@ -34,8 +34,8 @@ body {
     }
 
     @include respond(tab-port) {
-      font-size: 1.125rem;  // 18px
-      line-height: 1.375rem;  // 22px
+      font-size: 1.125rem; // 18px
+      line-height: 1.375rem; // 22px
     }
   }
 
@@ -45,13 +45,13 @@ body {
   }
 
   @include respond(tab-port) {
-    font-size: 2.75rem;  // 44px
-    line-height: 2.813rem;  // 45px
+    font-size: 2.75rem; // 44px
+    line-height: 2.813rem; // 45px
   }
 
   @include respond(phone) {
-    font-size: 2.375rem;  // 38px
-    line-height: 2.625rem;  // 42px
+    font-size: 2.375rem; // 38px
+    line-height: 2.625rem; // 42px
   }
 }
 
@@ -83,7 +83,7 @@ body {
     text-align: justify;
 
     @include respond(big-dekstop) {
-      font-size: 1.063rem;  // 17px
+      font-size: 1.063rem; // 17px
       line-height: 1.375rem; // 22px
     }
   }
@@ -119,7 +119,7 @@ body {
 
   &__button--description {
     font-weight: 500;
-    font-size: 0.813rem;  // 13px
+    font-size: 0.813rem; // 13px
     color: $color-primary-2;
 
     @include respond(big-dekstop) {
@@ -134,9 +134,14 @@ body {
 
 .footer__copy {
   color: $color-primary-2;
+  font-size: 0.9rem;
+  line-height: 1rem;
 
   @include respond(big-dekstop) {
-    font-size: 1.125rem;  // 18px
-    line-height: 1.375rem; // 22px
+    font-size: 1rem; // 16px
+    line-height: 1.125rem; // 18px
+  }
+  @include respond(PHONE) {
+    font-size: 0.75rem; // 12px
   }
 }

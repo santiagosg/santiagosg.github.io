@@ -26,33 +26,18 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// MenuToggle
 
-contenedor = document.querySelector(".container");
-header__logo = document.querySelector(".header__logo");
+// MENUTOGGLE
+const menuToggle = document.querySelector(".menuToggle");
+const menuToggleLine1 = document.querySelector(".menuToggle__line--1");
+const menuToggleLine2 = document.querySelector(".menuToggle__line--2");
+const menuToggleLine3 = document.querySelector(".menuToggle__line--3");
+const nav = document.querySelector(".nav");
 
-$(document).ready(function () {
-  // menu click event
-  $(".menuToggle").click(function () {
-    $(this).toggleClass("active");
-    $(".menuToggle__line").removeClass("no-animation");
-    if ($(this).hasClass("active")) {
-      $(".nav").addClass("active");
-      header__logo.style.position = " fixed";
-
-      if (window.matchMedia("(pointer: coarse)").matches) {
-      } else {
-        $("body").css({ overflow: "hidden" });
-        contenedor.style.marginRight = " 0.6rem";
-      }
-    } else {
-      $(".nav").removeClass("active");
-      header__logo.style.position = " relative";
-      if (window.matchMedia("(pointer: coarse)").matches) {
-      } else {
-        $("body").css({ overflow: "visible" });
-        contenedor.style.marginRight = " 0";
-      }
-    }
-  });
+menuToggle.addEventListener("click", function () {
+  menuToggle.classList.toggle("active");
+  nav.classList.toggle("active");
+  menuToggleLine1.classList.toggle("no-animation");
+  menuToggleLine2.classList.toggle("no-animation");
+  menuToggleLine3.classList.toggle("no-animation");
 });

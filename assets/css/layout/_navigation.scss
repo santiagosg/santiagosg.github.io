@@ -3,59 +3,9 @@
   align-items: center;
   
 
-  &.active{
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-    background-color: $color-white;
-    transition: transform .3s ease-in-out .2s, background-color .3s ease-in .4s;;
-  }
+  
 
-  &.active:before {
-    content: "";
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    transition: all .3s ease-in-out;
-  }
-
-  &.active &__list {
-    opacity: 1;
-    transform: translateY(25px);
-  }
-
-  &.active &__item {
-    margin-right: 0;
-    margin-top: 2px;
-    margin-bottom: 2px;
-  }
-
-  &.active &__item-button {
-    margin-top: .7rem;
-    margin-bottom: .7rem;
-  }
-
-  &.active &__link{
-    color: $color-primary-1;
-  }
-
-  &.active &__link-button {
-    background-color: $color-primary-1;
-    color: $color-white;
-    border-color: $color-primary-1;
-    padding: 0.375rem 1.125rem;  // 6px 18px
-  }
-
-  &.active &__color-theme{
-    background-color: $color-gray-light-1;
-    border-radius: 50%;
-    filter: invert(1);
-    padding: 4px;
-    transform: translateY(10px);
-  }
+  
 
   &__list {
     display: flex;
@@ -142,5 +92,59 @@
     align-items: center;
     justify-content: center;
     transform: scale(0);
+
+    &.active{
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+      background-color: $color-white;
+      transition: transform .3s ease-in-out .2s, background-color .3s ease-in .4s;
+    }
+
+    &.active:before {
+      content: "";
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      transition: all .3s ease-in-out;
+    }
+  
+    &.active &__list {
+      opacity: 1;
+      transform: translateY(25px);
+    }
+  
+    &.active &__item {
+      margin-right: 0;
+      margin-top: 2px;
+      margin-bottom: 2px;
+    }
+  
+    &.active &__item-button {
+      margin-top: .7rem;
+      margin-bottom: .7rem;
+    }
+  
+    &.active &__link{
+      color: $color-primary-1;
+    }
+  
+    &.active &__link-button {
+      background-color: $color-primary-1;
+      color: $color-white;
+      border-color: $color-primary-1;
+      padding: 0.375rem 1.125rem;  // 6px 18px
+    }
+  
+    &.active &__color-theme{
+      background-color: $color-gray-light-1;
+      border-radius: 50%;
+      filter: invert(1);
+      padding: 4px;
+      transform: translateY(10px);
+    }
   }
 }

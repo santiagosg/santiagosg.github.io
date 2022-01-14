@@ -62,11 +62,6 @@
     opacity: 1;
   }
 
-  /*
-  &__description--white {
-    color: $color-gray-light-2;
-  }*/
-
   &__heading {
     margin-top: 1.5rem; // 24px
     margin-bottom: 0.688rem; // 11px
@@ -82,6 +77,10 @@
     gap: 1rem;
     padding: 1.125rem 2.813rem 1.125rem; // 18px 45px 18px
     border-top: 1px solid $color-gray-light-1;
+
+    @include respond(tab-port) {
+      padding: 1.125rem 1.813rem 1.125rem;
+    }
   }
 
   &__button {
