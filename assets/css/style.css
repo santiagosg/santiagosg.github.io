@@ -1163,10 +1163,11 @@ a {
 .nav__link-lang--active {
   color: #1083D6;
   font-weight: 800;
+  cursor: not-allowed;
 }
 
 .nav__link-sep {
-  margin: 0 0.25rem;
+  margin-left: 0.25rem;
 }
 
 .nav__color-theme {
