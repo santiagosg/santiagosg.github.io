@@ -1201,7 +1201,9 @@ a {
     opacity: 1;
     -webkit-transform: scale(1);
             transform: scale(1);
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.6);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     -webkit-transition: background-color .3s ease-in .4s, -webkit-transform .3s ease-in-out .2s;
     transition: background-color .3s ease-in .4s, -webkit-transform .3s ease-in-out .2s;
     transition: transform .3s ease-in-out .2s, background-color .3s ease-in .4s;

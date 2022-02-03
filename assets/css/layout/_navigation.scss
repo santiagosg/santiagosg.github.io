@@ -98,7 +98,8 @@
       visibility: visible;
       opacity: 1;
       transform: scale(1);
-      background-color: $color-white;
+      background-color: rgba($color-white, 0.6);
+      backdrop-filter: blur(4px);
       transition: transform .3s ease-in-out .2s, background-color .3s ease-in .4s;
     }
 
