@@ -26,7 +26,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
 // MENUTOGGLE
 const menuToggle = document.querySelector(".menuToggle");
 const menuToggleLine1 = document.querySelector(".menuToggle__line--1");
@@ -41,3 +40,9 @@ menuToggle.addEventListener("click", function () {
   menuToggleLine2.classList.toggle("no-animation");
   menuToggleLine3.classList.toggle("no-animation");
 });
+
+// FOOTER COPYRIGHT
+const footerCopy = document.querySelector(".footer__copy");
+const actualYear = new Date().getFullYear();
+const copyYear = `&copy; ${actualYear} `;
+footerCopy.insertAdjacentHTML("afterbegin", copyYear);
